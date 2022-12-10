@@ -1,0 +1,45 @@
+@import "variables";
+@import "hover_N_active";
+@import 'atoms';
+@import 'molecules';
+@import 'organisms';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+@mixin mobile-settings{
+    @include mobile-atoms;
+    @include mobile-molecules;
+    @include mobile-organisms;
+    @include hover_N_active;
+}
+@mixin desktop-settings{
+    @include desktop-atoms;
+    @include desktop-molecules;
+    @include desktop-organisms;
+}
+
+@media only screen and (min-width:0px){ //MOBILE VIEW
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    @include mobile-settings;
+    body {
+        background-image: url($background-mobile);
+        overflow-x: hidden;
+        @include background-settings;
+    }
+} 
+@media only screen and (min-width:768px){} //SMALL TABLET VIEW
+@media only screen and (min-width:992px){
+    @include desktop-settings();
+    body {
+        background-image: url($background-desktop)
+    }
+} //LARGE TABLET VIEW
+@media only screen and (min-width:1200px){} //DESKTOP VIEW

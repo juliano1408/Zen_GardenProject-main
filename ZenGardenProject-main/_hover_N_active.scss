@@ -1,0 +1,341 @@
+@import "variables";
+
+@mixin hover_N_active{
+    .design-selection nav,
+    .design-archives nav,
+    .zen-resources {
+        ul {
+            li {
+                a {
+                    
+                }
+            }
+        }
+    }
+    
+    .intro > header,
+    .intro > .summary > p:nth-child(1),
+    .intro > .summary > p:nth-child(2),
+    .preamble > h3,
+    .preamble > p:nth-child(2),
+    .preamble > p:nth-child(3),
+    .preamble > p:nth-child(4),
+    .main > .explanation > h3,
+    .main > .explanation > p:nth-child(2),
+    .main > .explanation > p:nth-child(3),
+    .participation > h3, 
+    .participation > p:nth-child(2),
+    .participation > p:nth-child(3),
+    .participation > p:nth-child(4),
+    .benefits > h3,
+    .benefits > p:nth-child(2),
+    .requirements > h3,
+    .requirements > p:nth-child(2),
+    .requirements > p:nth-child(3),
+    .requirements > p:nth-child(4),
+    .requirements > p:nth-child(5),
+    .requirements > p:nth-child(6),
+    footer,
+    aside {
+    }
+    //INTRO (Red)
+    .intro {
+        
+        header{ //A1
+            //A1a + A1b
+
+            
+        }
+        header:hover,
+        header:active{
+          background-image: url('/images/panel1.png');
+          h1,
+          h2{
+            color:transparent;
+          }
+
+        }       
+        .summary { //A2
+            
+            p:nth-child(1):hover,
+            p:nth-child(1):active { //A2a
+              background-image: url('/images/panel2.png');
+              color:transparent;
+                 
+            }
+            p:nth-child(2):hover,
+            p:nth-child(2):active { //A2b
+              background-image: url('/images/panel3.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+            }
+        }
+        .preamble { //A3
+            
+            h3{
+                
+
+            } //A3a
+            p:nth-child(2):hover,
+            p:nth-child(2):active{
+              background-image: url('/images/panel5.png');
+              color:transparent;
+    
+            } //A3b
+            p:nth-child(3):hover,
+            p:nth-child(3):active{
+              background-image: url('/images/panel6.png');
+              color:transparent;
+
+            } //A3c
+            p:nth-child(4):hover,
+            p:nth-child(4):active{
+              background-image: url('/images/panel7.png');
+              color:transparent;
+
+            } //A3d
+        }
+    }
+    //MAIN (Green)
+    .main {
+        
+        .explanation{ //B1
+            
+            h3{
+                
+                
+            } //B1a
+            p:nth-child(2):hover,
+            p:nth-child(2):active{
+              background-image: url('/images/panel10.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+                
+            
+            } //B1b
+            p:nth-child(3):hover,
+            p:nth-child(3):active{
+
+            
+            } //B1c
+        }
+
+        .participation{ //B2
+            
+            h3{
+                
+                
+            } //B2a
+            p:nth-child(2):hover,
+            p:nth-child(2):active{
+              background-image: url('/images/panel11.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+                
+            } //B2b
+            p:nth-child(3):hover,
+            p:nth-child(3):active{
+              background-image: url('/images/panel12.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+                 
+                
+            } //B2c
+            p:nth-child(4):hover,
+            p:nth-child(4):active{
+              background-image: url('/images/panel13.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+                 
+                
+            } //B2d
+        }
+        .benefits{ //B3
+            
+            h3:hover,
+            h3:active{
+              background-image: url('/images/panel14.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+            }
+            p:nth-child(2):hover,
+            p:nth-child(2):active{
+              background-image: url('/images/panel15.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+                
+            } //B3a + 3b
+        }
+        .requirements{ //B4
+           
+            h3{
+                
+                
+            } //B4a
+            p:nth-child(2):hover,
+            p:nth-child(2):active{
+              background-image: url('/images/panel16.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+                
+            } //B4b
+            p:nth-child(3):hover,
+            p:nth-child(3):active{
+              background-image: url('/images/panel17.png');
+              color:transparent;
+              a {
+                color:transparent;
+              }
+                
+            } //B4c
+            p:nth-child(4){
+                
+            
+            } //B4d
+            p:nth-child(5){
+                
+                
+            } //B4e
+            p:nth-child(6){
+                
+                
+            } //B4f
+        }
+        footer{
+            
+            
+        }
+    } //B5
+
+    //ASIDE (Blue)
+    div#design-selection,  
+    div#design-archives, 
+    div#zen-resources{
+        ul{               
+            
+        }
+    }
+    aside:hover,
+    aside:active{
+      background-image: url('/images/panel8.png');
+      color:transparent;
+      .wrapper {
+        opacity:0;
+      }
+    }
+    
+}
+
+
+// @mixin desktop-molecules{
+//     .design-selection nav,
+//     .design-archives nav,
+//     .zen-resources {
+//         ul {
+//             li {
+//                 a {
+                    
+//                 }
+//             }
+//         }
+//     }
+//     //INTRO (Red)
+//     .intro {
+//         header{ //A1
+//             h1,
+//             h2 {
+                
+//             }
+//         }
+//         header:hover,
+//         header:active{
+//           color:transparent;
+//         }
+//         .summary { //A2
+//             p:nth-child(1) {
+                
+//             }
+//             p:nth-child(2) { //A2a + //A2b
+//             }
+//         }
+//         .preamble{ //A3
+//             h3{
+//             } //A3a
+//             p:nth-child(2){
+//             } //A3b
+//             p:nth-child(3){
+//             } //A3c
+//             p:nth-child(4){
+//             } //A3d
+//         }
+//     } 
+//     //MAIN (Green)
+//     div.main {
+//         .explanation{
+//             //B1a
+//             p:nth-child(2){
+//             } //B1b
+//             p:nth-child(3){
+//             } //B1c
+//         }
+//         .participation{ //B2
+//             h3{
+
+//             } //B2a
+//             p:nth-child(2){
+//             } //B2b
+//             p:nth-child(3){
+//             } //B2c
+//             p:nth-child(4){
+//             } //B2d
+//         }
+//         .benefits{ //B3
+            
+//             h3{
+//             } //B3a
+//             p:nth-child(2){
+//             } //B3b
+//         }
+//         .requirements{ //B4
+//             h3{
+//             } //B4a
+//             p:nth-child(2){
+//             } //B4b
+//             p:nth-child(3){
+//             } //B4c
+//             p:nth-child(4){
+//             } //B4d
+//             p:nth-child(5){
+//             } //B4e
+//             p:nth-child(6){
+//             } //B4f
+//         }
+//         footer{
+//         } //B5
+//     }
+//     //ASIDE (Blue)
+//     div#design-selection, 
+//     div#design-archives, 
+//     div#zen-resources{
+//             ul{          
+
+//             }
+//     }
+
+// }

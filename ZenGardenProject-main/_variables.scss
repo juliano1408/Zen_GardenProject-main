@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nothing+You+Could+Do&display=swap');
+// Fonts
+$font-headline: 'Nothing You Could Do', serif;
+$font-paragraph: 'Montserrat', sans-serif;
+// Font Colors
+$primary: #385155; //h1
+$accent1: #D6AFC6; //a:hover, a:active
+$accent2: #53596F; //h2, a
+$accent3: #E5E9F5; //semi-translucent background
+$accent4: #5C7691; //h3, p
+//Font Sizes
+$desktop-h1: 5rem;
+$desktop-h2: 3rem;
+$desktop-h3: 2rem;
+$desktop-body: 1em;
+$desktop-footer: 1.8em;
+
+$mobile-h1: 2rem;
+$mobile-h2: 1rem;
+$mobile-h3: 0.85rem;
+$mobile-body: 0.6rem;
+$mobile-footer: 1.3em;
+
+// Backgrounds
+$background-desktop: "images/cherry-blossom-desktop.jpg";
+$background-mobile: "images/cherry-blossom-phone.jpg";
+
+@mixin background-settings {
+  background-color: $accent1;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

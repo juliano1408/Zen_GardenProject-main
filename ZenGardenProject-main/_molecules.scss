@@ -1,0 +1,331 @@
+@import "variables";
+
+@mixin mobile-molecules{
+    * {
+        transition: all 0.75s;
+    }
+    .design-selection nav,
+    .design-archives nav,
+    .zen-resources {
+        ul {
+            li {
+                a {
+                    font-size: $desktop-body;
+                }
+            }
+        }
+    }
+    
+    .intro > header,
+    .intro > .summary > p:nth-child(1),
+    .intro > .summary > p:nth-child(2),
+    .preamble > h3,
+    .preamble > p:nth-child(2),
+    .preamble > p:nth-child(3),
+    .preamble > p:nth-child(4),
+    .main > .explanation > h3,
+    .main > .explanation > p:nth-child(2),
+    .main > .explanation > p:nth-child(3),
+    .participation > h3, 
+    .participation > p:nth-child(2),
+    .participation > p:nth-child(3),
+    .participation > p:nth-child(4),
+    .benefits > h3,
+    .benefits > p:nth-child(2),
+    .requirements > h3,
+    .requirements > p:nth-child(2),
+    .requirements > p:nth-child(3),
+    .requirements > p:nth-child(4),
+    .requirements > p:nth-child(5),
+    .requirements > p:nth-child(6),
+    footer,
+    aside {
+        // background-color: rgba(255,255,255,0.8);
+        background-image:url('./images/whiteBox.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2.5px solid black;
+        padding: 0.9rem;
+        margin: 0.7rem;
+        border-radius: .5rem;
+    }
+    //INTRO (Red)
+    .intro {
+        grid-column: 1 / 7;
+        header{ //A1
+            display: grid;
+            grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+            grid-auto-flow: dense;
+            //A1a + A1b
+            h1{ grid-column: 1/5;
+                .card:hover {
+                    background: url("images/panel18.png") no-repeat;
+                }
+            }
+            h2 {
+                grid-column: 5 / 7;
+                .card:hover {
+                    background: url("images/panel17.png") no-repeat;
+                }
+            }
+        }       
+        .summary { //A2
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-auto-flow: dense;
+            p:nth-child(1) { //A2a
+                grid-column: 1 / 4;   
+            }
+            p:nth-child(2) { //A2b
+                grid-column: 4 / 7;    
+            }
+        }
+        .preamble { //A3
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-auto-flow: dense;
+            h3{
+                grid-column: 1 / 7;
+
+            } //A3a
+            p:nth-child(2){
+                grid-column: 1 / 4;
+    
+            } //A3b
+            p:nth-child(3){
+                grid-column: 4 / 7;
+
+            } //A3c
+            p:nth-child(4){
+                grid-column: 1 / 7;
+
+            } //A3d
+        }
+    }
+    //MAIN (Green)
+    .main {
+        grid-column: 1 / 7;
+        .explanation{ //B1
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-auto-flow: dense;
+            h3{
+                grid-column: 1 / 7;
+                
+            } //B1a
+            p:nth-child(2){
+                grid-column: 1 / 4;
+            
+            } //B1b
+            p:nth-child(3){
+                grid-column: 4 / 7;
+            
+            } //B1c
+        }
+
+        .participation{ //B2
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-flow: dense;
+            h3{
+                grid-column: 1 / 3;
+                grid-row: 1/2;
+                
+            } //B2a
+            p:nth-child(2){
+                grid-column: 1 / 3;
+                grid-row: 2/6;
+                
+            } //B2b
+            p:nth-child(3){
+                grid-column: 3 / 5;
+                grid-row: 1/6;
+                
+            } //B2c
+            p:nth-child(4){
+                grid-column: 5 / 7;
+                grid-row: 1/6;
+                
+            } //B2d
+        }
+        .benefits{ //B3
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-flow: dense;
+            h3{
+               grid-column: 1/2 
+            }
+            p:nth-child(2){
+                grid-column: 2 / 7;
+                
+            } //B3a + 3b
+        }
+        .requirements{ //B4
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-auto-flow: dense;
+            h3{
+                grid-column: 1 / 7;
+                
+            } //B4a
+            p:nth-child(2){
+                grid-column: 1 / 4;
+                
+            } //B4b
+            p:nth-child(3){
+                grid-column: 4 / 7;
+                
+            } //B4c
+            p:nth-child(4){
+                grid-column: 1 / 3;
+            
+            } //B4d
+            p:nth-child(5){
+                grid-column: 3 / 5;
+                
+            } //B4e
+            p:nth-child(6){
+                grid-column: 5 / 7;
+                
+            } //B4f
+        }
+        footer{
+            grid-column: 1 / 7;
+            
+        }
+    } //B5
+
+    //ASIDE (Blue)
+    div#design-selection,  
+    div#design-archives, 
+    div#zen-resources{
+        ul{               
+            list-style: none;
+        }
+    }
+    
+}
+
+
+@mixin desktop-molecules{
+    .design-selection nav,
+    .design-archives nav,
+    .zen-resources {
+        ul {
+            li {
+                a {
+                    font-size: $desktop-body;
+                }
+            }
+        }
+    }
+    //INTRO (Red)
+    .intro {
+        header{ //A1
+            h1,
+            h2 {
+                grid-column: 1 / 5;
+            }
+        }
+        .summary { //A2
+            p:nth-child(1) {
+                grid-column: 1 / 4;
+            }
+            p:nth-child(2) { //A2a + //A2b
+                grid-column: 4 / 7 ;
+            }
+        }
+        .preamble{ //A3
+            h3{
+                grid-column: 1 / 7;
+            } //A3a
+            p:nth-child(2){
+                grid-column: 1 / 3;
+            } //A3b
+            p:nth-child(3){
+                grid-column: 3 / 5;
+            } //A3c
+            p:nth-child(4){
+                grid-column: 5 / 7;
+            } //A3d
+        }
+    } 
+    //MAIN (Green)
+    div.main {
+        .explanation{
+            //B1a
+            p:nth-child(2){
+                grid-column: 1 / 3;
+            } //B1b
+            p:nth-child(3){
+                grid-column: 3 / 7;
+            } //B1c
+        }
+        .participation{ //B2
+            h3{
+                grid-column: 1 / 2;
+                grid-row: 7 / 10;
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                text-align: center;
+            } //B2a
+            p:nth-child(2){
+                grid-column: 2 / 4;
+                grid-row: 7 / 8;
+            } //B2b
+            p:nth-child(3){
+                grid-column: 3 / 6;
+                grid-row: 8 / 9;
+            } //B2c
+            p:nth-child(4){
+                grid-column: 5 / 7;
+                grid-row: 9 / 10;
+            } //B2d
+        }
+        .benefits{ //B3
+            height: 15%;
+            h3{
+                grid-column: 1 / 3;
+            } //B3a
+            p:nth-child(2){
+                grid-column: 3 / 7;
+            } //B3b
+        }
+        .requirements{ //B4
+            h3{
+                grid-column: 1 / 7;
+            } //B4a
+            p:nth-child(2){
+                grid-column: 1 / 3;
+            } //B4b
+            p:nth-child(3){
+                grid-column: 3 / 7;
+            } //B4c
+            p:nth-child(4){
+                grid-column: 1 / 5;
+            } //B4d
+            p:nth-child(5){
+                grid-column: 1/5;
+            } //B4e
+            p:nth-child(6){
+                grid-column: 5/7;
+                grid-row: span 2;
+            } //B4f
+        }
+        footer{
+            grid-column: 1 / 7;
+        } //B5
+    }
+    //ASIDE (Blue)
+    div#design-selection, 
+    div#design-archives, 
+    div#zen-resources{
+            ul{          
+                list-style: none;
+                margin-bottom: 2.5rem;
+            }
+    }
+
+}

@@ -1,0 +1,55 @@
+@import "variables";
+
+@mixin mobile-atoms{
+    h1,
+    h2,
+    h3 {
+    font-family: $font-headline;
+    }
+
+    body {
+        font-family: $font-paragraph;
+    }
+
+    h1 {
+        color: $primary;
+        font-size: $mobile-h1;
+    }
+
+    h2 {
+        color: $accent2;
+        font-size: $mobile-h2;
+    }
+
+    h3 {
+        color: $accent4;
+        font-size: $mobile-h3;
+    }
+
+    p {
+        color: $accent4;
+        font-size: $mobile-body;
+    }
+
+    a {
+        color: $accent4;
+    }
+}
+@mixin desktop-atoms{
+    h1 {
+        font-size: $desktop-h1;
+    }
+
+    h2 {
+        color: $accent2;
+        font-size: $desktop-h2;
+    }
+
+    h3 {
+        font-size: $desktop-h3;
+    }
+
+    p {
+        font-size: $desktop-body;
+    }
+}
